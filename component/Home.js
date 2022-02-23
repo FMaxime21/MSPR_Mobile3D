@@ -50,21 +50,8 @@ const Home = ({navigation}) => {
       }}/>
 
       <Button
-        title="Go to register"
-        onPress={() => navigation.navigate('Register')}
-      />
-
-      <Button
-        title="Go to 3D AR"
+        title="SCAN YOUR MODEL"
         onPress={() => navigation.navigate('Viro3DAR')}
-      />
-      <Button
-        title="Go to Scantest"
-        onPress={() => navigation.navigate('ScanCode')}
-      />
-      <Button
-        title="Go to Capture D'ecrantest"
-        onPress={() => navigation.navigate('CaptureTest')}
       />
     </View>
 
