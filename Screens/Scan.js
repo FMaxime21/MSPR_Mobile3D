@@ -41,12 +41,16 @@ const InitialScene = props => {
       <ViroAmbientLight color="#ffffff" />
       {data.object === 'Rhino' ? (
         <Viro3DObject
-          source={require('../assets/Animaux/Motomoto/motomotoobj.obj')}
-          position={[0, 0, -5]}
+          source={require('../assets/Animaux/Motomoto/rhino_1.obj')}
+          position={[0, -1, -5]}
           scale={[1, 1, 1]}
-          rotation={[10, 20, 0]}
+          rotation={[0, -90, 0]}
           materials={['Rhinoceros']}
           type="OBJ"
+          resources={[
+            require("../assets/Animaux/Motomoto/test.mtl"),
+            require("../assets/Animaux/Motomoto/Rhino.png"),
+          ]}
         />
       )  : data.object === 'Monkey' ? (
         <Viro3DObject
@@ -55,15 +59,12 @@ const InitialScene = props => {
           scale={[1, 1, 1]}
           rotation={[10, 20, 0]}
           type="OBJ"
-          resources= 
-          {[
-            require('../assets/Animaux/Singe/babouche_obj.mtl')
-          ]}
+          materials={['Monkey']}
         /> 
       ) : data.object === 'Snake' ?(
         <Viro3DObject
-          source={require('../assets/Animaux/Serpent/snake.obj')}
-          position={[0, 0, -5]}
+          source={require('../assets/Animaux/Serpent/snakes_1.obj')}
+          position={[0, -1, -5]}
           scale={[1, 1, 1]}
           rotation={[10, 20, 0]}
           materials={['Snake']}
@@ -71,10 +72,10 @@ const InitialScene = props => {
         /> 
       ) : (
         <Viro3DObject
-        source={require('../assets/Animaux/Motomoto/motomotoobj.obj')}
+        source={require('../assets/Animaux/Motomoto/rhino_1.obj')}
         position={[0, 0, -5]}
         scale={[1, 1, 1]}
-        rotation={[10, 20, 0]}
+        rotation={[-100, 0, 110]}
         materials={['Rhinoceros']}
         type="OBJ"
       />

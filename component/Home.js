@@ -14,6 +14,7 @@ import {
 
 import Settings from '../Screens/Settings';
 import Scan from '../Screens/Scan';
+import Partage from '../Screens/Partage';
 
 const Navbar = createBottomTabNavigator();
 
@@ -34,8 +35,8 @@ const Home = ({navigation}) => {
         width: 25,
         height: 25
       }}/>
-      <Text>Or you can go to the parameter icon</Text>
-      <Image source={require('../assets/Parametre.png')} 
+      <Text>Or you can go to the share icon to share your model</Text>
+      <Image source={require('../assets/Partage.png')} 
       resizeMode='contain'
       style={{
         width: 25,
@@ -106,11 +107,11 @@ const NavBar = () =>
                   </View>
               )  
             }}/>
-            <Navbar.Screen name=" " component={Settings} options={{
+            <Navbar.Screen name=" " component={Partage} options={{
               tabBarIcon: ({focused}) => (
                   <View style={{alignItems: 'center', justifyContent: 'center'}}>
                       <Image
-                        source={require('../assets/Parametre.png')}
+                        source={require('../assets/Partage.png')}
                         resizeMode='contain'
                         style={{
                             width: 25,
@@ -118,7 +119,7 @@ const NavBar = () =>
                             tintColor: focused ? 'blue' : '#748c94'
                         }}
                       />
-                      <Text style={{color: focused ? 'blue' : '#748c94', fontSize: 12}}>Settings</Text>
+                      <Text style={{color: focused ? 'blue' : '#748c94', fontSize: 12}}>Partage</Text>
                   </View>
               )  
             }}/>

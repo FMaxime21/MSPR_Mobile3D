@@ -27,6 +27,22 @@ const NavBar = () =>
                 }
             }}
             >
+            <Navbar.Screen name="Settings" component={Settings} options={{
+              tabBarIcon: ({focused}) => (
+                  <View style={{alignItems: 'center', justifyContent: 'center'}}>
+                      <Image
+                        source={require('../assets/Parametre.png')}
+                        resizeMode='contain'
+                        style={{
+                            width: 25,
+                            height: 25,
+                            tintColor: focused ? 'blue' : '#748c94'
+                        }}
+                      />
+                      <Text style={{color: focused ? 'blue' : '#748c94', fontSize: 12}}>Partage</Text>
+                  </View>
+              )  
+            }}/>
             <Navbar.Screen name="Home" component={Home} options={{
               tabBarIcon: ({focused}) => (
                   <View style={{alignItems: 'center', justifyContent: 'center'}}>
@@ -40,22 +56,6 @@ const NavBar = () =>
                         }}
                       />
                       <Text style={{color: focused ? 'blue' : '#748c94', fontSize: 12}}>Home</Text>
-                  </View>
-              )  
-            }}/>
-            <Navbar.Screen name="Settings" component={Settings} options={{
-              tabBarIcon: ({focused}) => (
-                  <View style={{alignItems: 'center', justifyContent: 'center'}}>
-                      <Image
-                        source={require('../assets/Parametre.png')}
-                        resizeMode='contain'
-                        style={{
-                            width: 25,
-                            height: 25,
-                            tintColor: focused ? 'blue' : '#748c94'
-                        }}
-                      />
-                      <Text style={{color: focused ? 'blue' : '#748c94', fontSize: 12}}>Settings</Text>
                   </View>
               )  
             }}/>
